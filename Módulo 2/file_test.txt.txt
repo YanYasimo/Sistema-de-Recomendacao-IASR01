@@ -1,0 +1,5 @@
+linha1
+asgard
+continue reading
+end of file
+eof
