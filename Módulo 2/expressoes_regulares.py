@@ -108,7 +108,7 @@ re.purge()
 # %%
 import re
 entrada = "Temos vários emails para contato: contato@atualcargas.com.br, yan.moura@atualcargas.com.br, ti@atualcargas.com.br"
-teste = re.compile(r'([A-Za-z0-9_]+@[A-Za-z0-9_]+\.[a-z]{2,3}(\.[a-z]{2})?)')
+teste = re.compile(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}')
 teste = teste.findall(entrada)
 print(teste)
 
