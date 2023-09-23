@@ -1,7 +1,8 @@
 # %%
+# get json from a url
 import requests
-url = 'https://www.google.com'
+url = "https://api.bcb.gov.br/dados/serie/bcdata.sgs.16121/dados?formato=json"
 response = requests.get(url)
-print(response.status_code)
+response.json()
 
 # %%
