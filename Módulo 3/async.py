@@ -24,8 +24,8 @@ async def train_model_async(delay = 3):
     model.fit(X, y)
     print(f"Model trained!")
 
-# executing async tasks 
 async def main():
+    print("Starting async tasks...")
     # Different delays for each task
     tasks = [
         train_model_async(i) for i in [2, 3, 4]
@@ -33,3 +33,9 @@ async def main():
 
     # Wait for all tasks to finish
     await asyncio.gather(*tasks)
+
+if __name__ == "__main__":
+    # Create an event loop and run the main() function
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(main())
+    loop.close()

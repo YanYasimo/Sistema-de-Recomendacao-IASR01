@@ -18,7 +18,8 @@ def train_model(thread_id, X, y):
     time.sleep(5)
     print(f"Thread {thread_id} model trained!")
 
-def main():
+
+if __name__ == "__main__":
     # Generate data
 
     # Create threads
